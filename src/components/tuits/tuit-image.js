@@ -1,6 +1,5 @@
 import React from "react";
-
-export const TuitImage = ({tuit}) => {
+const TuitImage = ({tuit}) => {
   return(
     <div className="position-relative">
       <img src={`../images/${tuit.image}`}
@@ -16,3 +15,4 @@ export const TuitImage = ({tuit}) => {
     </div>
   );
 };
+export default TuitImage;

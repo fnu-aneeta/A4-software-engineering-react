@@ -1,5 +1,5 @@
 import React from "react";
-export const TuitVideo = ({tuit}) => {
+const TuitVideo = ({tuit}) => {
   return(
     <div
       className="ttr-responsive-video ttr-rounded-15px position-relative overflow-hidden w-100 mt-2">
@@ -9,8 +9,8 @@ export const TuitVideo = ({tuit}) => {
               frameBorder="0"
               className="position-absolute top-0 w-100 h-100"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen>
-      </iframe>
+              allowFullScreen></iframe>
     </div>
   )
 };
+export default TuitVideo;

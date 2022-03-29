@@ -1,10 +1,8 @@
 import axios from "axios";
-// const BASE_URL = "https://cs5500-01-sp22.herokuapp.com/api";
-const BASE_URL = "http://localhost:4000/api";
-// const BASE_URL = "https://cs-5500a3.herokuapp.com/api";
-
-const LOGIN_API = `${BASE_URL}/login`;
-const USERS_API = `${BASE_URL}/users`;
+// const BASE_URL = "https://cs5500-01-sp22.herokuapp.com";
+//"http://localhost:4000";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+const USERS_API = `${BASE_URL}/api/users`;
 
 export const createUser = (user) =>
   axios.post(`${USERS_API}`, user)
@@ -23,11 +21,7 @@ export const deleteUser = (uid) =>
     .then(response => response.data);
 
 export const deleteUsersByUsername = (username) =>
-  axios.delete(`${USERS_API}/username/${username}/delete`)
-    .then(response => response.data);
-
-export const findUserByCredentials = (credentials) =>
-  axios.post(`${LOGIN_API}`, credentials)
+  axios.get(`${USERS_API}/username/${username}/delete`)
     .then(response => response.data);
 
 const service = {
