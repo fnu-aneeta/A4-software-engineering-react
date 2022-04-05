@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "../navigation";
 import WhatsHappening from "../whats-happening";
 import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
-import Home from "../home";
+import {Home} from "../home";
 import Bookmarks from "../bookmarks";
 import Profile from "../profile";
 import './tuiter.css'
@@ -38,6 +38,7 @@ function Tuiter () {
               <Route path="/messages" element={<Messages/>}/>
               <Route path="/bookmarks" element={<Bookmarks/>}/>
               <Route path="/lists" element={<Lists/>}/>
+              <Route path="/profile" element={<Profile/>}/>
               <Route path="/profile/*" element={<Profile/>}/>
               <Route path="/profile/edit" element={<EditProfile/>}/>
               <Route path="/more" element={<More/>}/>

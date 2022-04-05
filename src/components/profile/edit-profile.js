@@ -107,7 +107,8 @@ const EditProfile = () => {
                      name="topics"/>
               <label for="politics">Politics</label>
             </div>
-        </form></div>
+        </form>
+      </div>
     );
 };
 export default EditProfile;
